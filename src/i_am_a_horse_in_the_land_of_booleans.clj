@@ -18,10 +18,10 @@
     :else ""))    
 
 (defn teen? [age]
-  ":(")
+  (if (< 12 age 19) true false)) ; < is greater than
 
 (defn not-teen? [age]
-  ":(")
+  (if (> age 12 19) true false))
 
 (defn generic-doublificate [x]
   ":(")
