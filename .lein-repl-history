@@ -3,3 +3,19 @@
 (+ -4 (* -4 2))
 (* -4 -2)
 (System/exit 0)
+(defn fizzbuzz [n]
+  (cond 
+    (= (divides? n 15) 0) "gotcha!"
+    (= (divides? n 3) 0) "fizz"
+    (= (divides? n 5) 0) "buzz"
+    :else ""))
+(defn divides? [divisor n]
+  (if (= (mod n divisor) 0) true false))
+(defn fizzbuzz [n]
+  (cond 
+    (= (divides? n 15) 0) "gotcha!"
+    (= (divides? n 3) 0) "fizz"
+    (= (divides? n 5) 0) "buzz"
+    :else "")) 
+(fizzbuzz 2)
+(System/exit 0)

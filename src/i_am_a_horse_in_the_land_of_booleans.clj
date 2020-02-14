@@ -12,9 +12,9 @@
 
 (defn fizzbuzz [n]
   (cond 
-    (= (divides? n 3) 0) "fizz"
-    (= (divides n 5) 0) "buzz"
-    (= (divides n 15) 0) "gotcha!"
+    (== (mod n 3) 0) "fizz"
+    (== (mod n 5) 0) "buzz"
+    (== (mod n 15) 0) "gotcha!"
     :else ""))    
 
 (defn teen? [age]
