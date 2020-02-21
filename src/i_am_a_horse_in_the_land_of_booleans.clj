@@ -21,9 +21,15 @@
   (if (< 12 age 20) true false)) ; < is greater than
 
 (defn not-teen? [age] ;  20 > 12 < age
-                      ;  age > 20 > 12
-  (if (< age 12) true 
-                 (if (< 19 age) true false))) ; < 12 20 
+ (not (teen? age))) ; < 12 20 
+
+
+(defn sign [z]
+  (if (< z 0)
+    "-"
+    "+"))
+(defn abs* [n]
+  (if (< 0 n) n (/ (* n n) 2)))
 
 (defn generic-doublificate [x]
   ":(")
