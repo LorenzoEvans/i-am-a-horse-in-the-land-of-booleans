@@ -20,8 +20,10 @@
 (defn teen? [age]
   (if (< 12 age 20) true false)) ; < is greater than
 
-(defn not-teen? [age]
-  (if (> 12 age 20) true false))
+(defn not-teen? [age] ;  20 > 12 < age
+                      ;  age > 20 > 12
+  (if (< age 12) true 
+                 (if (< 19 age) true false))) ; < 12 20 
 
 (defn generic-doublificate [x]
   ":(")
